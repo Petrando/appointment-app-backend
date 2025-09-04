@@ -24,3 +24,6 @@ if(ENV !== 'production') {
 app.get("/", (req, res) => {
   res.send("API is running on Vercel!");
 });
+
+// export for vercel
+export default app;
