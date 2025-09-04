@@ -1,7 +1,7 @@
 import { Router } from 'express';
-import { USERS, UserRole } from '../models/user';
-import { CONSULTATIONS, ConsultationStatus } from '../models/consultation';
-import { authenticateToken } from '../middleware/auth';
+import { USERS, UserRole } from '../models/user.js';
+import { CONSULTATIONS, ConsultationStatus } from '../models/consultation.js';
+import { authenticateToken } from '../middleware/auth.js';
 import dotenv from 'dotenv';
 
 dotenv.config();

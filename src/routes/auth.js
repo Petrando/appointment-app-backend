@@ -1,9 +1,10 @@
 import { Router } from 'express';
 import { StreamChat } from 'stream-chat';
 import { hashSync } from 'bcrypt';
-import { USERS, UserRole } from '../models/user';
+import { USERS, UserRole } from '../models/user.js';
 import dotenv from 'dotenv';
-import { sign } from 'jsonwebtoken';
+import pkg from 'jsonwebtoken';
+const { sign } = pkg;
 // Load environment variables
 dotenv.config();
 

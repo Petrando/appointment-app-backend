@@ -1,16 +1,19 @@
-const express = require('express');
+import express from 'express';
+import dotenv from 'dotenv';
+import cors from 'cors';
+import authRoutes from './routes/auth.js';
+import consultationRoutes from './routes/consultations.js';
+dotenv.config();
+
 const app = express();
-const PORT = process.env.PORT || 3000;
-
-// Middleware to parse JSON requests
 app.use(express.json());
+app.use(cors());
 
-// Example route
-app.get('/', (req, res) => {
-  res.send('Hello from Express backend!');
-});
+// Routes
+app.use('/auth', authRoutes);
+app.use('/consultations', consultationRoutes);
 
-// Start server
+const { PORT } = process.env;
 app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}`);
+  console.log(`App listening on port ${PORT}`);
 });
