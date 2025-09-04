@@ -13,7 +13,14 @@ app.use(cors());
 app.use('/auth', authRoutes);
 app.use('/consultations', consultationRoutes);
 
-const { PORT } = process.env;
-app.listen(PORT, () => {
-  console.log(`App listening on port ${PORT}`);
+const { PORT, ENV } = process.env;
+
+if(ENV !== 'production') {
+    app.listen(PORT, () => {
+        console.log(`App listening on port ${PORT}`);
+    });
+}
+
+app.get("/", (req, res) => {
+  res.send("API is running on Vercel!");
 });
