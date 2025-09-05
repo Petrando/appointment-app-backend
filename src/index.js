@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import authRoutes from './routes/auth.js';
 import consultationRoutes from './routes/consultations.js';
+import usersRoutes from './routes/users.js';
 dotenv.config();
 
 const app = express();
@@ -12,6 +13,7 @@ app.use(cors());
 // Routes
 app.use('/auth', authRoutes);
 app.use('/consultations', consultationRoutes);
+app.use('/users', usersRoutes);
 
 const { PORT, ENV } = process.env;
 
