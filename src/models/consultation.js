@@ -9,17 +9,17 @@ export const ConsultationStatus = {
 export const CONSULTATIONS = [
   {
     id: '9j5ljw1dh',
-    clientId: '7z6ydcm',
-    therapistId: '41m3lxk',
-    dateTime: '2025-03-11T13:15:29.364Z',
+    clientId: 'clr0j6q',
+    therapistId: 'sk2igl3',
+    dateTime: '2026-03-11T13:15:29.364Z',
     status: ConsultationStatus.Pending,
     notes: 'First meeting',
   },
   {
     id: '9j51ga1dh',
-    clientId: '7z6ydcm',
-    therapistId: '41m3lxk',
-    dateTime: '2025-03-18T13:15:29.364Z',
+    clientId: 'vpmwlbx',
+    therapistId: 'sk2igl3',
+    dateTime: '2026-03-18T13:15:29.364Z',
     status: ConsultationStatus.Pending,
     notes: 'Second meeting',
   },

@@ -36,7 +36,7 @@ router.post('/', authenticateToken, async (req, res) => {
 });
 
 // Get consultations
-router.get('/', authenticateToken, async (req, res) => {
+router.get('/', authenticateToken, async (req, res) => {  
   const user = req.user;
 
   const userConsultations = CONSULTATIONS.filter((consultation) =>
@@ -52,7 +52,7 @@ router.get('/', authenticateToken, async (req, res) => {
       clientEmail: client?.email,
     };
   });
-
+  
   return res.json(consultationsWithClientInfo);
 });
 
